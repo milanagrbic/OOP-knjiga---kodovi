@@ -1,0 +1,2 @@
+Klase Osoba i Zapsinik su iste kao u direktorijumu Nadjacavanje metoda i odgovaraju kodovima 5.9 i 5.11, respektivno,
+ovdje su kopirane smo radi lakšeg testiranja.
