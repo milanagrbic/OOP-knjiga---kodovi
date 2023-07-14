@@ -1,0 +1,2 @@
+Klasa Tacka je iz Poglavlja 4 i odgovara kodu 4.1,
+ovdje je kopirana smo radi lakšeg testiranja.
