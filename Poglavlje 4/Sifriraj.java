@@ -1,74 +1,74 @@
-	import java.util.Scanner;
+import java.util.Scanner;
 	
-	public class Sifriraj{
+public class Sifriraj{
 		
-		public static String sifriraj(String recenica){
+	public static String sifriraj(String recenica){
 			
-			String rez = "";
+		String rez = "";
 			
-			Scanner sken = new Scanner(recenica);
+		Scanner sken = new Scanner(recenica);
 			
-			while(sken.hasNext()){
-				rez += sifrirajRijec(sken.next());
-				rez += " ";	
-			}
-			
-			return rez;
+		while(sken.hasNext()){
+			rez += sifrirajRijec(sken.next());
+			rez += " ";	
 		}
+			
+		return rez;
+	}
 		
-		private static String sifrirajRijec(String r){
+	private static String sifrirajRijec(String r){
 			
-			String rez = "";
+		String rez = "";
 			
-			if(pocinjeVelikimSlovom(r))
-				rez = sifrirajVeliko(r);
-			else if(pocinjeMalimSlovom(r))
-				rez = sifrirajMalo(r);
-			else
-				rez = sifrirajOstalo(r);
+		if(pocinjeVelikimSlovom(r))
+			rez = sifrirajVeliko(r);
+		else if(pocinjeMalimSlovom(r))
+			rez = sifrirajMalo(r);
+		else
+			rez = sifrirajOstalo(r);
 			
-			return rez;
-		}
+		return rez;
+	}
 		
-		private static boolean pocinjeVelikimSlovom(String s){
+	private static boolean pocinjeVelikimSlovom(String s){
 			
-			if(s.charAt(0) >= 'A' && s.charAt(0) <= 'Z')
-				return true;
-			else
-				return false;
-		}
-		
-		
-		private static String sifrirajVeliko(String r){
-			
-			String rez = "";
-			
-			for(int i = 0; i<r.length(); i++)
-				rez += sifraV(r.charAt(i));
-			
-			return rez;	
-		}
-		
-		private static boolean pocinjeMalimSlovom(String s){
-			
-			if(s.charAt(0) >= 'a' && s.charAt(0) <= 'z')
-				return true;
-			else
-				return false;
-		}
+		if(s.charAt(0) >= 'A' && s.charAt(0) <= 'Z')
+			return true;
+		else
+			return false;
+	}
 		
 		
-		private static String sifrirajMalo(String r){
+	private static String sifrirajVeliko(String r){
 			
-			String rez = "";
+		String rez = "";
 			
-			for(int i = r.length()-1; i>=0; i--)
-				rez += sifraM(r.charAt(i));
+		for(int i = 0; i<r.length(); i++)
+			rez += sifraV(r.charAt(i));
 			
-			return rez;	
-		}
+		return rez;	
+	}
 		
-		private static char sifraV(char c){
+	private static boolean pocinjeMalimSlovom(String s){
+			
+		if(s.charAt(0) >= 'a' && s.charAt(0) <= 'z')
+			return true;
+		else
+			return false;
+	}
+		
+		
+	private static String sifrirajMalo(String r){
+			
+		String rez = "";
+			
+		for(int i = r.length()-1; i>=0; i--)
+			rez += sifraM(r.charAt(i));
+			
+		return rez;	
+	}
+		
+	private static char sifraV(char c){
 			
 		char rez = c;
 				
@@ -85,9 +85,9 @@
 				rez = (char)(c + 3);
 		
 		return rez;
-		}
-		
-		private static char sifraM(char c){
+	}
+	
+	private static char sifraM(char c){
 			
 		char rez = c;
 		
@@ -104,17 +104,17 @@
 				rez = (char)(c - 3);
 		
 		return rez;
-		}
-		
-		private static String sifrirajOstalo(String r){
-			
-			if(r.equals("?"))
-				return "!";
-			else if (r.equals("!"))
-				return ".";
-			else if(r.equals("."))
-				return "?";
-			else 
-				return r;
-		}
 	}
+		
+	private static String sifrirajOstalo(String r){
+			
+		if(r.equals("?"))
+			return "!";
+		else if (r.equals("!"))
+			return ".";
+		else if(r.equals("."))
+			return "?";
+		else 
+			return r;
+	}
+}

@@ -6,6 +6,6 @@ public class Grad{
 		
 	public String toString(){
 		String s = postanskiBroj + " " + naziv + ", " +drzava;
-			return s;	
+		return s;	
 	}
 }

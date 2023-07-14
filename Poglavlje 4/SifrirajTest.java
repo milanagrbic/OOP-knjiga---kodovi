@@ -1,24 +1,24 @@
-	import java.util.Scanner;
+import java.util.Scanner;
 	
-	public class SifrirajTest{
+public class SifrirajTest{
 		
-		public static void main(String [] args){
+	public static void main(String [] args){
 			
-			Scanner sken = new Scanner(System.in);
+		Scanner sken = new Scanner(System.in);
 			
-			String recenica, rezultat, sljedeca;
+		String recenica, rezultat, sljedeca;
 			
-			do{
-				System.out.println("Unesite recenicu:");
-				recenica = sken.nextLine();
+		do{
+			System.out.println("Unesite recenicu:");
+			recenica = sken.nextLine();
 				
-				rezultat = Sifriraj.sifriraj(recenica);
-				System.out.println("Sifrirana recenica je: ");
-				System.out.println(rezultat);
+			rezultat = Sifriraj.sifriraj(recenica);
+			System.out.println("Sifrirana recenica je: ");
+			System.out.println(rezultat);
 				
-				System.out.println("Da li zelite da unesete sljedecu recenicu?");
-				sljedeca = sken.nextLine();		
+			System.out.println("Da li zelite da unesete sljedecu recenicu?");
+			sljedeca = sken.nextLine();		
 				
-			}while(sljedeca.equalsIgnoreCase("da"));		
-		}
+		}while(sljedeca.equalsIgnoreCase("da"));		
 	}
+}

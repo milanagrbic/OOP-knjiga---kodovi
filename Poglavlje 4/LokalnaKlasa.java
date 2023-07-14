@@ -33,8 +33,8 @@ public class LokalnaKlasa{
 		
 	public static void main (String [] args){
 	
-	LokalnaKlasa lk = new LokalnaKlasa();
-	lk.poruka();
+		LokalnaKlasa lk = new LokalnaKlasa();
+		lk.poruka();
 	
 	}
 }
